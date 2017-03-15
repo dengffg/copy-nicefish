@@ -1,5 +1,8 @@
 # CopyNicefish
 
+This project is used in practice Angular2.
+From the 大漠穷秋 NiceFish project.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.2.
 
 ## Development server
