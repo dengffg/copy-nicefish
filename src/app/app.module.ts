@@ -2,13 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HttpModule,JsonpModule ,Http} from '@angular/http';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate';
 import {ToastModule} from 'ng2-toastr/ng2-toastr';
 
+import { SharedModule } from './shared/shared.module';
 import { AppComponent } from './app.component';
 import { UserLoginService } from './user/user-login/user-login.service';
-import { UserLoginComponent } from './user/user-login/user-login.component';
 import { ForgetPwdComponent } from './user/forget-pwd/forget-pwd.component';
 import { ForgetPwdService } from './user/forget-pwd/forget-pwd.service';
 
@@ -21,16 +20,14 @@ export function createTranslateLoader(http: Http) {
 @NgModule({
   declarations: [
     AppComponent,
-    ForgetPwdComponent,
-    UserLoginComponent
+    ForgetPwdComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
-    ReactiveFormsModule,
-    FormsModule,
     HttpModule,
     JsonpModule,
+    SharedModule,
     ToastModule.forRoot(),
     RouterModule.forRoot(appRoutes),
     TranslateModule.forRoot({
