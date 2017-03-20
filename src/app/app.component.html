@@ -17,6 +17,9 @@
         <li routerLinkActive='active' class="dropdown">
           <a routerLink='posts'>{{'app.articles' | translate}}</a>
         </li>
+        <li class="dropdown">
+          <a routerLink='echart'>图标</a>
+        </li>
       </ul>
       <ul *ngIf="!currentUser?.username" class="nav navbar-nav navbar-right">
         <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">

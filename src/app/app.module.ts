@@ -12,6 +12,8 @@ import { ForgetPwdComponent } from './user/forget-pwd/forget-pwd.component';
 import { ForgetPwdService } from './user/forget-pwd/forget-pwd.service';
 
 import {appRoutes} from './app.routes';
+import { ChartComponent } from './chart/chart.component';
+import { EChartOptionDirective1 } from './chart/echart-option.directive';
 
 export function createTranslateLoader(http: Http) {
     return new TranslateStaticLoader(http, './assets/i18n', '.json');
@@ -20,7 +22,9 @@ export function createTranslateLoader(http: Http) {
 @NgModule({
   declarations: [
     AppComponent,
-    ForgetPwdComponent
+    ForgetPwdComponent,
+    EChartOptionDirective1,
+    ChartComponent
   ],
   imports: [
     BrowserModule,
